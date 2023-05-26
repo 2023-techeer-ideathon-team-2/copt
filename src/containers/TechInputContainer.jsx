@@ -12,7 +12,7 @@ const TechInputContainer = () => {
   const FE_TRACK = [
     <>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Title title={'Choose Your Language ✏'} />
+        <Title title={'Choose Your Language 🖋'} />
       </div>
       <Radio
         text='Javascript'
@@ -33,7 +33,7 @@ const TechInputContainer = () => {
     </>,
     <>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Title title={'Choose Your Framework ✏'} />
+        <Title title={'Choose Your Framework 🔥'} />
       </div>
       <Radio
         text='React'
@@ -57,7 +57,7 @@ const TechInputContainer = () => {
   const BE_TRACK = [
     <>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Title title={'Choose Your Framework ✏'} />
+        <Title title={'Choose Your Framework 🔥'} />
       </div>
       <Radio
         text='SpringBoot'

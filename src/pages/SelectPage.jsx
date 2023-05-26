@@ -95,6 +95,10 @@ const SelectPage = () => {
             borderTop: '1px solid #ccc',
           }}>
           <Button
+          style ={{
+            color : '#151920',
+            opacity : '50%'
+          }}
             backgroundcolor='#F5F7FB'
             text={'Prev'}
             onClick={handlePrevious}

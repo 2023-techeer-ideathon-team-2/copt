@@ -30,7 +30,7 @@ const ChooseQuestion = () => {
                     paddingTop: "1.7rem",
                     borderTop: "1px solid #ccc"
                     }}>
-                    <Button backgroundColor={"#F5F7FB"} text={"Prev"}/>
+                    <Button backgroundColor={"#F5F7FB"} text={"Prev"} style ={{color : '#151920', opacity : '50%'}}/>
                     <Button backgroundColor={"#9B68B4"} text={"Next"}/>
                 </div>
                 
