@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useAtom, useAtomValue } from 'jotai';
 import { techStepAtom } from '@/atoms/tech-step';
 import { formAtom } from '@/atoms/form';
+import axios from 'axios';
 
 const StepArrays = [
   <TopicInputContainer key={0} />,
@@ -36,7 +37,32 @@ const SelectPage = () => {
       return;
     }
     console.log(form);
+    getCode();
   };
+
+  const prompt = "나는 spring boot 2.대 버전으로 쇼핑몰을 만들어 보려해 장바구니 기능과 상품 리스트 출력 기능, 검색 기능이 필요해 DB는 JPA를 사용할게. 폴더 구조와 코드를 다음과 같은 json형식으로 주고, 코드 제공을 해줘. 코드는 ```(code)```에 싸서 보여줘 그 외 설명은 안줘도돼. JSON 폴더 구조:  ``` {     \"src\": {         \"main\": {             \"java\": {                 \"com.shoppingmall\": {                     \"config\": {                         \"WebConfiguration.java\"                      },                    \"controller\": {                         \"CartController.java\",                         \"ProductController.java\"                     },                     \"model\": {                         \"CartItem.java\",                         \"Product.java\"                     },                     \"repository\": {                         \"CartItemRepository.java\",                         \"ProductRepository.java\"                     },                     \"service\": {                         \"CartService.java\",                         \"ProductService.java\",                         \"SearchService.java\"                      },                     \"ShoppingmallApplication.java\"                 }             }         }     },     \"pom.xml\" } ";
+  const getCode = async() => {
+    console.log("요청되었습니다.")
+    await axios
+        .post("https://api.openai.com/v1/engines/text-davinci-003/completions",{
+          prompt: prompt,
+          temperature: 0.5,
+          max_tokens: 3500
+        },{
+          headers: {
+            Authorization: 'Bearer ',
+            "Content-Type": "application/json",
+          },
+        })
+        .then((response) => {
+            console.log(response)
+            console.log(response.data.choices[0].text)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+  }
+
 
   return (
     <div
