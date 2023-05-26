@@ -1,3 +1,5 @@
+import ChooseQuestion from "../components/ChooseQuestion";
+
 const SelectPage = () => {
   return (
     <div
@@ -7,13 +9,7 @@ const SelectPage = () => {
         alignItems: 'center',
         height: '100%',
       }}>
-      <div
-        style={{
-          width: 400,
-          height: 600,
-
-          backgroundColor: 'white',
-        }}></div>
+        <ChooseQuestion/>
     </div>
   );
 };
