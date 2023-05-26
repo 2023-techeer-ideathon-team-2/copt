@@ -3,9 +3,9 @@ import PositionInputContainer from '../containers/PositionInputContainer';
 import TechInputContainer from '../containers/TechInputContainer';
 import { Button } from '@/components';
 import { useState } from 'react';
-import { useAtom, useAtomValue } from 'jotai';
+import { useAtom } from 'jotai';
 import { techStepAtom } from '@/atoms/tech-step';
-import { formAtom } from '@/atoms/form';
+import { useNavigate } from 'react-router-dom';
 
 const StepArrays = [
   <TopicInputContainer key={0} />,
@@ -16,9 +16,10 @@ const StepArrays = [
 const SelectPage = () => {
   const [rootStep, setRootStep] = useState(0);
   const [techStep, setTechStep] = useAtom(techStepAtom);
-  const form = useAtomValue(formAtom);
+  const navigate = useNavigate();
 
   const handlePrevious = () => {
+    if (rootStep === 0) return;
     if (rootStep !== 0 && techStep === 0) {
       setRootStep(rootStep - 1);
       return;
@@ -35,7 +36,7 @@ const SelectPage = () => {
       setTechStep(techStep + 1);
       return;
     }
-    console.log(form);
+    navigate('/result');
   };
 
   return (

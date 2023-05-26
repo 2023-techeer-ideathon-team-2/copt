@@ -1,0 +1,33 @@
+{
+  "파일구조": {
+      "src": {
+          "main": {
+              "java": {
+                  "com.shoppingmall": {
+                      "config": {
+                          "WebConfiguration.java": {}
+                      },
+                      "controller": {
+                          "CartController.java": {},
+                          "ProductController.java": {}
+                      },
+                      "model": {
+                          "CartItem.java": {},
+                          "Product.java": {}
+                      },
+                      "repository": {
+                          "CartItemRepository.java": {},
+                          "ProductRepository.java": {}
+                      },
+                      "service": {
+                          "CartService.java": {},
+                          "ProductService.java": {},
+                          "SearchService.java": {}
+                      },
+                      "ShoppingmallApplication.java": {}
+                  }
+              }
+          }
+      }
+  }
+}
