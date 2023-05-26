@@ -24,7 +24,7 @@ const ResultPage = () => {
         }}>
         <Button
           text='초기화'
-          style={{ marginBottom: '26px' }}
+          style={{ marginBottom: '26px', width: '150px' }}
           backgroundcolor='#9B68B4'
           onClick={() => {
             setDepth(result.파일구조);
@@ -34,7 +34,11 @@ const ResultPage = () => {
           return (
             <div
               key={key}
-              style={{ fontSize: '20px', cursor: 'pointer' }}
+              style={{
+                fontSize: '20px',
+                cursor: 'pointer',
+                marginBottom: '10px',
+              }}
               onClick={() => {
                 if (Object.keys(depth[key]).length === 0) {
                   setVisible(true);
