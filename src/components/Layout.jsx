@@ -1,6 +1,6 @@
 const Layout = ({ children }) => {
   return (
-    <div style={{ backgroundColor: '#333' }}>
+    <div style={{ backgroundColor: '#222529' }}>
       <div
         style={{
           maxWidth: '640px',
