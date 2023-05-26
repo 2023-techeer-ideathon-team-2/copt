@@ -1,20 +1,24 @@
 const Radio = (props) => {
-  const { text,value, ...others } = props;
+  const { text, value, ...others } = props;
 
   return (
-    <label htmlFor={others.id}>
-      <input type='radio' {...others} value={value}
+    <label htmlFor={others.id} style={{ cursor: 'pointer' }}>
+      <input
+        type='radio'
+        {...others}
+        value={value}
         style={{
           verticalAlign: 'middle',
-          appearance: 'none',
+          // appearance: 'none',
           border: 'max(2px, 0.1em) solid gray',
           borderRadius: '50%',
           width: '1.25rem',
           height: '1.25em',
           cursor: 'pointer',
-          ":checked": {
-            border: "0.4em solid #9B68B4"
-          }
+          ':checked': {
+            border: '0.4em solid #9B68B4',
+          },
+          marginRight: '20px',
         }}
       />
 
