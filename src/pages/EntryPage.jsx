@@ -1,7 +1,12 @@
 import Logo from '../assets/logo.svg';
 import Code from '../assets/code.svg'
+import { useNavigate } from 'react-router-dom';
 
 const EntryPage = () => {
+  const navigate = useNavigate();
+  const navigateToSelect = () => {
+    navigate("/SelectPage");
+  };
 return (
   <>
     <div style={{
@@ -70,8 +75,9 @@ return (
         height: '55px',
         fontSize: '24px',
         fontWeight: '600',
-        color: '#222529'
-      }}>START</button>
+        color: '#222529',
+        cursor: 'Pointer',
+      }}  onClick = {navigateToSelect}>START</button>
     </div>
     <footer style={{ fontSize: '16px',
       fontWeight: '200',
