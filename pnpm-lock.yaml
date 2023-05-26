@@ -10,17 +10,21 @@ specifiers:
   eslint-plugin-react-refresh: ^0.3.4
   jotai: ^2.1.0
   normalize.css: ^8.0.1
+  prismjs: ^1.29.0
   react: ^18.2.0
   react-dom: ^18.2.0
   react-router-dom: ^6.11.2
+  react-simple-code-editor: ^0.13.1
   vite: ^4.3.2
 
 dependencies:
   jotai: 2.1.0_react@18.2.0
   normalize.css: 8.0.1
+  prismjs: 1.29.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.11.2_biqbaboplfbrettd7655fr4n2y
+  react-simple-code-editor: 0.13.1_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
   '@types/react': 18.2.7
@@ -1679,6 +1683,11 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
+  /prismjs/1.29.0:
+    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
+    engines: {node: '>=6'}
+    dev: false
+
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
     dependencies:
@@ -1736,6 +1745,16 @@ packages:
     dependencies:
       '@remix-run/router': 1.6.2
       react: 18.2.0
+    dev: false
+
+  /react-simple-code-editor/0.13.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-XYeVwRZwgyKtjNIYcAEgg2FaQcCZwhbarnkJIV20U2wkCU9q/CPFBo8nRXrK4GXUz3AvbqZFsZRrpUTkqqEYyQ==}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react/18.2.0:
