@@ -1,5 +1,5 @@
 import Logo from '../assets/logo.svg';
-import Code from '../assets/code.svg';
+import Code from '../assets/codegpt.png';
 import { useNavigate } from 'react-router-dom';
 
 const EntryPage = () => {
