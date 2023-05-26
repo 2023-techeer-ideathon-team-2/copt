@@ -3,7 +3,7 @@ const Layout = ({ children }) => {
     <div style={{ backgroundColor: '#222529' }}>
       <div
         style={{
-          maxWidth: '640px',
+          maxWidth: '100vw',
           minHeight: '100vh',
           margin: '0 auto',
           display: 'flex',
