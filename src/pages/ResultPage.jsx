@@ -21,7 +21,7 @@ const ResultPage = () => {
           max_tokens: 3500
         }, {
           headers: {
-            Authorization: 'Bearer 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',
+            Authorization: 'Bearer ',
             "Content-Type": "application/json",
           },
         });
